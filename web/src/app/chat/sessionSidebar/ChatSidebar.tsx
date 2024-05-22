@@ -58,9 +58,8 @@ export const ChatSidebar = ({
         flex-col 
         h-screen
         transition-transform`}
-        id="chat-sidebar" 
+        id="chat-sidebar"
       >
-        <script>document.addEventListener("load", function(){document.getElementById("chat-sidebar").children[0].style.display = "none";});</script>
         <div className="pt-6 flex">
           <Link
             className="ml-4 w-full"
