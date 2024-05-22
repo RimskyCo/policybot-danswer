@@ -215,7 +215,7 @@ export function _WelcomeModal({ user }: { user: User | null }) {
       );
       break;
     default:
-      title = "🎉 Welcome to Danswer";
+      title = "🎉 Welcome to Policy Bot × Danswer";
       body = (
         <>
           <div>

@@ -93,7 +93,7 @@ def undelete_persona(
 @basic_router.post("")
 def create_persona(
     create_persona_request: CreatePersonaRequest,
-    user: User | None = Depends(current_user),
+    user: User | None = Depends(current_admin_user),
     db_session: Session = Depends(get_session),
 ) -> PersonaSnapshot:
     return create_update_persona(
@@ -108,7 +108,7 @@ def create_persona(
 def update_persona(
     persona_id: int,
     update_persona_request: CreatePersonaRequest,
-    user: User | None = Depends(current_user),
+    user: User | None = Depends(current_admin_user),
     db_session: Session = Depends(get_session),
 ) -> PersonaSnapshot:
     return create_update_persona(
@@ -122,7 +122,7 @@ def update_persona(
 @basic_router.delete("/{persona_id}")
 def delete_persona(
     persona_id: int,
-    user: User | None = Depends(current_user),
+    user: User | None = Depends(current_admin_user),
     db_session: Session = Depends(get_session),
 ) -> None:
     mark_persona_as_deleted(

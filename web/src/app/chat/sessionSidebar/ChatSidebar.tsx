@@ -58,8 +58,9 @@ export const ChatSidebar = ({
         flex-col 
         h-screen
         transition-transform`}
-        id="chat-sidebar"
+        id="chat-sidebar" 
       >
+        <script>document.addEventListener("load", function(){document.getElementById("chat-sidebar").children[0].style.display = "none";});</script>
         <div className="pt-6 flex">
           <Link
             className="ml-4 w-full"
@@ -72,7 +73,7 @@ export const ChatSidebar = ({
                 <Image src="/logo.png" alt="Logo" width="1419" height="1520" />
               </div>
               <h1 className="flex text-2xl text-strong font-bold my-auto">
-                Danswer
+                Policy Bot × Danswer
               </h1>
             </div>
           </Link>
